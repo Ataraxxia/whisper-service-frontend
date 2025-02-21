@@ -13,5 +13,6 @@ source whisper-service-frontend-venv/bin/activate
 pip install -r whisper-service-frontend/requirements.txt
 
 cd whisper-service-frontend
-celery -A app.celery worker --loglevel=info && python3 app.py
+celery -A app.celery worker --loglevel=info &
+python3 app.py
 ```
